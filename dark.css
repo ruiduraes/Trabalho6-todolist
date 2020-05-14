@@ -62,7 +62,7 @@ input:focus, button:focus {
 
 #btn_registo{
   background-color: #00000000;
-  color: #a860ff;
+  color: #bb86fc;
   border: none;
   cursor: pointer;
   position: absolute;
@@ -73,7 +73,7 @@ input:focus, button:focus {
 
 #btn_login{
   background-color: #00000000;
-  color: #a860ff;
+  color: #bb86fc;
   border: none;
   cursor: pointer;
   position: absolute;
@@ -81,7 +81,6 @@ input:focus, button:focus {
   right: 150px;
   font-weight: 800;
 }
-  
 
   
   /* Input do login */

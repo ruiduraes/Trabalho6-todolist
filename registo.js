@@ -1,4 +1,11 @@
-var array;
+
+
+function submitForm() {  
+    if(validation) { // fails    
+       alert("your message");  
+       return false; 
+    } 
+ }
 
 function Validar() {
 

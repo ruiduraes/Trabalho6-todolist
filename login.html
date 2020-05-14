@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<form autocomplete="off">
+<form autocomplete="off" method="post" action="login2.php">
 <head>
-    <link rel="stylesheet" type="text/css" href="registo.css"> 
+    <link rel="stylesheet" type="text/css" href="login.css"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,10 +12,10 @@
 <body>
   <div>   
       <h1>Login</h1>
-      <input type="text" id="login_email" placeholder="Endereço de E-mail">
-      <input type="password" id="login_password" placeholder="Password">
-      <input type="button" id="btn_aceitar" value="Feito" onclick="Validar()"> 
-      <input type="button" id="btn_cancelar" value="Voltar" onClick= "location.href='inicio.html'" ></input> 
+      <input type="text" id="login_email" name="txt_email" placeholder="Endereço de E-mail">
+      <input type="password" id="login_password" name="txt_password" placeholder="Password">
+      <input type="submit" name="submit" id="btn_aceitar"  value="Login" onclick="Validar()"> 
+      <input type="button" id="btn_cancelar"  value="Voltar" onClick= "location.href='inicio.html'" ></input> 
   </div>
 
   <script src="login.js">

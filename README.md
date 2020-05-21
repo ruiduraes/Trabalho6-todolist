@@ -5,4 +5,7 @@ Como correr este website:
 3º - Crie uma pasta chamada 'to-do' dentro do htdocs que se encontra dentro da pasta Xampp C:\xampp\htdocs; <p>
 3º - Mova esses ficheiros para uma pasta dentro da pasta que criou C:\xampp\htdocs\to-do; <p>
 4º - Execute o Xampp Control Panel e dê "start" no Apache e MySQL; <p>
+5º - Crie aqui uma nova base de dados http://localhost/phpmyadmin, chamada de to-do;
+6º- Crie agora uma tabela chamada registo com 6 colunas:
+  
 5º - Por fim cole este url no browser http://localhost/to-do/inicio.html. <p>

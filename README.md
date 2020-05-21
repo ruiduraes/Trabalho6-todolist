@@ -15,10 +15,9 @@ Xampp: https://www.apachefriends.org/download.html<p>
   
 ## Software usado para desenvolver o projeto:<p>
 
-Visual Studio Code<p>
-    Front-end: HTML e CSS<p>          
-    Back-end: JavaScript e PHP<p>
-              
+Visual Studio Code:<p>
+    Front-end: HTML e CSS          
+    Back-end: JavaScript e PHP<p>         
 PHPMyAdmin<p>
 Xampp<p>
 

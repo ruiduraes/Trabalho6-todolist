@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<form autocomplete="off" method="post" action="login.php">
+<form autocomplete="off" method="post" action="php/login.php">
 <head>
-    <link rel="stylesheet" type="text/css" href="login.css"> 
+    <link rel="stylesheet" type="text/css" href="css/login.css"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,10 +15,10 @@
       <input type="text" id="login_email" name="txt_email" placeholder="Endereço de E-mail">
       <input type="password" id="login_password" name="txt_password" placeholder="Password">
       <input type="submit" name="submit" id="btn_aceitar"  value="Login" onclick="Validar()"> 
-      <input type="button" id="btn_cancelar"  value="Voltar" onClick= "location.href='inicio.html'" ></input> 
+      <input type="button" id="btn_cancelar"  value="Voltar" onClick= "location.href='html/inicio.html'" ></input> 
   </div>
 
-  <script src="login.js">
+  <script src="js/login.js">
       function Validar();
   </script> 
 </body>
@@ -30,7 +30,7 @@ session_start(); // Starting Session
 $error = ''; // Variable To Store Error Message
 if (isset($_POST['submit'])) {
 if (empty($_POST['txt_email']) || empty($_POST['txt_password'])) {
-  die(header("location: login.php"));
+  die(header("location: php/login.php"));
 }
 else{
 // Define $username and $password
@@ -48,7 +48,7 @@ $stmt->bind_result($Email, $Pass);
 $stmt->store_result();
 if($stmt->fetch()) //fetching the contents of the row {
 $_SESSION['txt_email'] = $Email; // Initializing Session
-header("location: inicio_login.html"); // Redirecting To Profile Page
+header("location: html/inicio_login.html"); // Redirecting To Profile Page
 }
 
 }

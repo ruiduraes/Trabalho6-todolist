@@ -30,7 +30,7 @@ session_start(); // Starting Session
 $error = ''; // Variable To Store Error Message
 if (isset($_POST['submit'])) {
 if (empty($_POST['txt_email']) || empty($_POST['txt_password'])) {
-  die(header("location: login.html"));
+  die(header("location: login.php"));
 }
 else{
 // Define $username and $password

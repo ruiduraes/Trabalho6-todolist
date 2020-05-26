@@ -9,18 +9,18 @@ function Validar() {
 
     if(email=="")
     {
-        alert("Introduza o seu email.")
+        errorbox("Introduza o seu email.")
     }
     
     else if(!expresion.test(email))
     {
         //verifica a expressao do email
-         alert("Endereço de email errado.");
+        errorbox("Endereço de email errado.");
     } 
 
     else if(password=="")
     {
-        alert("Introduza a password")
+        errorbox("Introduza a password")
     }
 
     

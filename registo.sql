@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Maio-2020 às 18:11
+-- Tempo de geração: 26-Maio-2020 às 13:17
 -- Versão do servidor: 10.4.11-MariaDB
--- versão do PHP: 7.2.28
+-- versão do PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -29,11 +29,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `registo` (
+  `id` int(10) NOT NULL,
   `Nome` varchar(30) NOT NULL,
   `Sobrenome` varchar(30) NOT NULL,
-  `Cidade` varchar(30) NOT NULL,
-  `Telefone` int(9) NOT NULL,
-  `Email` varchar(40) NOT NULL,
+  `Cidade` varchar(30) DEFAULT NULL,
+  `Telefone` varchar(30) DEFAULT NULL,
+  `Email` varchar(50) NOT NULL,
   `Password` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -41,10 +42,9 @@ CREATE TABLE `registo` (
 -- Extraindo dados da tabela `registo`
 --
 
-INSERT INTO `registo` (`Nome`, `Sobrenome`, `Cidade`, `Telefone`, `Email`, `Password`) VALUES
-('asd', 'asd', '', 0, 'asd@dsf.sdf', 's'),
-('asd', 'asd', '', 0, 'asdasdad@dsdfsdfdssd.dsf', 's'),
-('rerreerreer', 'aaaaaaa', '', 0, 'naaaaaaaaaaaaaaaaaaaao@gmasil.com', 'aaa');
+INSERT INTO `registo` (`id`, `Nome`, `Sobrenome`, `Cidade`, `Telefone`, `Email`, `Password`) VALUES
+(1, 'Rui ', 'Durães', 'Maia', '', 'rui@ismai.pt', '123'),
+(2, 'Ricardo', 'Nogueira', 'Ermesinde', '', 'ricky17@hotmail.com', 'ricardo');
 
 --
 -- Índices para tabelas despejadas
@@ -54,8 +54,17 @@ INSERT INTO `registo` (`Nome`, `Sobrenome`, `Cidade`, `Telefone`, `Email`, `Pass
 -- Índices para tabela `registo`
 --
 ALTER TABLE `registo`
-  ADD UNIQUE KEY `Email` (`Email`);
-ALTER TABLE `registo` ADD FULLTEXT KEY `Email_2` (`Email`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `registo`
+--
+ALTER TABLE `registo`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

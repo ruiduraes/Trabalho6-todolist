@@ -97,6 +97,19 @@ input:focus, button:focus {
   font-size: 18px;
 }
 
+#btn_home{
+  background-color: #0000001e;
+  color: #bb86fc;
+  border: 2px solid black;
+  border-color: #e7e7e700;
+  padding: 13px 28px;
+  cursor: pointer;
+  position: absolute;
+  right: 1065px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
   
   /* Input do login */
   .form-login input[type=text], .form-login input[type=password]{

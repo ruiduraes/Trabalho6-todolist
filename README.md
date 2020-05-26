@@ -10,8 +10,9 @@ Xampp: https://www.apachefriends.org/download.html<p>
 2º - Crie uma pasta chamada **to-do** dentro do htdocs que se encontra dentro da pasta Xampp C:\xampp\htdocs; <p>
 3º - Copie esses ficheiros para uma pasta dentro da pasta que criou C:\xampp\htdocs\to-do; <p>
 4º - Execute o Xampp Control Panel e dê **start** no Apache e MySQL; <p>
-5º - Aceda a http://localhost/phpmyadmin/index.php , e importe o ficheiro **registo.sql**;<p>
-6º - Por fim cole este url no browser http://localhost/to-do/inicio.html. <p>
+5º - Aceda a http://localhost/phpmyadmin/index.php , e crie uma base de dados com o nome **to-do**;<p>
+6º - Importe o ficheiro **registo.sql** na base de dados;<p>
+7º - Por fim cole este url no browser http://localhost/to-do/inicio.html. <p>
   
 ### Software usado para desenvolver o projeto:<p>
 

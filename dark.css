@@ -49,7 +49,7 @@ a:hover{
   text-decoration: underline;
 }
 .topnav{
-  height: 70px;
+  height: 50px;
   width: 100%;
   background-color: rgb(31, 31, 31);
 }
@@ -60,15 +60,29 @@ input:focus, button:focus {
     outline: 0;
   }
 
+#area_privada{
+  background-color: #00000000;
+  color: #bb86fc;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 2%;
+  right:300px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
 #btn_registo{
   background-color: #00000000;
   color: #bb86fc;
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 3%;
+  top: 2%;
   right: 90px;
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 #btn_login{
@@ -77,9 +91,10 @@ input:focus, button:focus {
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 3%;
-  right: 150px;
-  font-weight: 800;
+  top: 2%;
+  right: 165px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
   

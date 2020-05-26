@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<form autocomplete="off" method="post" action="registo.php">
+<form autocomplete="off" method="post" action="php/registo.php">
 <head>
-    <link rel="stylesheet" type="text/css" href="registo.css"> 
+    <link rel="stylesheet" type="text/css" href="css/registo.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -22,10 +22,10 @@
       <input type="password" id="txt_password_2" name="txt_password2" half placeholder="Repita a Password">
       <input type="submit" id="btn_aceitar" name="baseDados" value="Feito" onclick="Validar()" > 
       <input type="button" id="btn_limpar" value="Limpar" onClick = "Limpar()"> 
-      <input type="button" id="btn_cancelar" value="Voltar" onClick= "location.href='inicio.html'" ></input> 
+      <input type="button" id="btn_cancelar" value="Voltar" onClick= "location.href='html/inicio.html'" ></input> 
   </div>
 
-  <script src="registo.js">
+  <script src="js/registo.js">
     function Numeros();
     function Letras();
     function Limpar();
@@ -58,7 +58,6 @@ $dbname = "to-do";
 // Cria conexao
 $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
 
-
 if (mysqli_connect_error()){
 die('Connect Error ('. mysqli_connect_errno() .') '
 . mysqli_connect_error());
@@ -68,7 +67,7 @@ $sql = "INSERT INTO registo (Nome, Sobrenome, Cidade, Telefone, Email, Password)
 values ('$Nome','$Sobrenome', '$Cidade', '$Telefone', '$Email', '$Pass')";
 if ($conn->query($sql)){
 
-    header("Location: login.html");
+    header("Location: html/login.html");
 }
 else{
 echo "Error: ". $sql ."

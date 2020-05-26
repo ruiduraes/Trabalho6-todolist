@@ -48,7 +48,7 @@ $stmt->bind_result($Email, $Pass);
 $stmt->store_result();
 if($stmt->fetch()) //fetching the contents of the row {
 $_SESSION['txt_email'] = $Email; // Initializing Session
-header("location: inicio.html"); // Redirecting To Profile Page
+header("location: inicio_login.html"); // Redirecting To Profile Page
 }
 
 }

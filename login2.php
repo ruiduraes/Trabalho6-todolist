@@ -1,4 +1,3 @@
-
 <?php
 session_start(); // Starting Session
 $error = ''; // Variable To Store Error Message
@@ -24,6 +23,5 @@ if($stmt->fetch()) //fetching the contents of the row {
 $_SESSION['txt_email'] = $Email; // Initializing Session
 header("location: inicio.html"); // Redirecting To Profile Page
 }
-
 }
 ?>

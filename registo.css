@@ -35,6 +35,7 @@
     cursor: pointer;
     background-color: #bb86fca9;
     color: white;
+    height: 50px;
   }
   
   #btn_registo,#btn_login{
@@ -63,6 +64,7 @@
     margin-bottom: 30px;
     font-size: 2em;
     color: #bb86fc;
+    text-align: center;
   }
 
   h5{

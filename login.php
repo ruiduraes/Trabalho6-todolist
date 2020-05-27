@@ -10,13 +10,18 @@
 </head>
 
 <body>
-  <div>   
+<div class="topnav">
+      <a class="active">Home</a>
+      <a id="btn_registo" onClick= "location.href='registo.php'">Registo</a>
+      <a id="btn_login" onClick= "location.href='login.php'">Login</a>
+</div>
+    <form class="form" id="forma" autocomplete="off">  
       <h1>Login</h1>
       <input type="text" id="login_email" name="txt_email" placeholder="Endereço de E-mail">
       <input type="password" id="login_password" name="txt_password" placeholder="Password">
       <input type="submit" name="submit" id="btn_aceitar"  value="Login" onclick="Validar()"> 
-      <input type="button" id="btn_cancelar"  value="Voltar" onClick= "location.href='inicio.html'" ></input> 
-  </div>
+      <input type="button" id="btn_cancelar"  value="Voltar" onClick= "location.href='inicio.html'">
+    </form>
 
   <script src="login.js">
       function Validar();

@@ -12,7 +12,7 @@ Xampp: https://www.apachefriends.org/download.html<p>
 4º - Execute o Xampp Control Panel e dê **start** no Apache e MySQL; <p>
 5º - Aceda a http://localhost/phpmyadmin/index.php , e crie uma base de dados com o nome **to-do**;<p>
 6º - Importe o ficheiro **registo.sql** na base de dados;<p>
-7º - Por fim cole este url no browser http://localhost/to-do/inicio.html. <p>
+7º - Por fim cole este url no browser http://localhost/to-do. <p>
   
 ### Software usado para desenvolver o projeto:<p>
 

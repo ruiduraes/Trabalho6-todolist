@@ -15,7 +15,7 @@
       <a id="btn_registo" onClick= "location.href='registo.php'">Registo</a>
       <a class="active">Login</a>
     </div>
-    <form class="form" id="forma" autocomplete="off">  
+    <form id="forma" autocomplete="off">  
       <h1>Login</h1>
       <input type="text" id="login_email" name="txt_email" placeholder="Endereço de E-mail">
       <input type="password" id="login_password" name="txt_password" placeholder="Password">
@@ -50,8 +50,6 @@ if(!empty($_POST)) {
         //var_dump($user['Email']);
 
         header("location: perfil.php?name=" . $user['Email']);
-
-
     }
 }
 ?>

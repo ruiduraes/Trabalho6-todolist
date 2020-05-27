@@ -13,12 +13,8 @@
         <button id="btn_home" onclick="location.href='inicio.html'">Home</button>
         <!--Terminar botao para alterar dark/light-->
         <label class="switch">
-          <input type="checkbox">
-          <!--<input type="checkbox" onclick="changeCSS('positive.css', 0);">
-          <input type="checkbox" onclick="changeCSS('negative.css', 0);">-->
-          <span class="slider round"></span>
         </label>
-          <button type="button" id="btn_login" onClick= "location.href='login.php'">Login  |</button>
+          <button type="button" id="btn_login" onClick= "location.href='login.php'">Login</button>
           <button id="btn_registo" onClick= "location.href='registo.php'">Registo</button>
       </div>
 
@@ -44,5 +40,19 @@
       document.getElementById("Data").innerHTML= date.toDateString(); //Obtemos a data em que estamos
 
     </script>
+    <style>
+      #btn_home{
+        background-color: #0000001e;
+      color: #bb86fc;
+      border: 2px solid black;
+      border-color: #e7e7e700;
+      padding: 13px 28px;
+      cursor: pointer;
+      position: absolute;
+      right: 1065px;
+      font-weight: 700;
+      font-size: 18px;
+      }
+    </style>
   </body>
   </html>

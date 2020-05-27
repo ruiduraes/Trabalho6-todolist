@@ -35,7 +35,7 @@ session_start(); // Starting Session
 include "connection.php";
 
 if(!empty($_POST)) {
-    $result = mysqli_query($conn,"SELECT Email, Password FROM registo Where Email='" .$_POST["txt_email"] . "' and Password ='" . $_POST["txt_password"]. "'");
+    $result = mysqli_query($conn,"SELECT Email, Password,id FROM registo Where Email='" .$_POST["txt_email"] . "' and Password ='" . $_POST["txt_password"]. "'");
 
     $count = mysqli_num_rows($result);
     $user = $result->fetch_assoc();
@@ -45,8 +45,9 @@ if(!empty($_POST)) {
     }
     else{
         $_SESSION['user_email'] = $user['Email'];
+        $_SESSION['id_user'] = $user['id'];
 
-        var_dump($user['Email']);
+        //var_dump($user['Email']);
 
         header("location: perfil.php?name=" . $user['Email']);
 

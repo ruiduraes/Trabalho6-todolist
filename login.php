@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<form autocomplete="off" method="post" action="login.php">
 <head>
     <link rel="stylesheet" type="text/css" href="login.css"> 
     <meta charset="UTF-8">
@@ -10,12 +9,12 @@
 </head>
 
 <body>
-<div class="topnav">
-      <a class="active">Home</a>
+    <div class="topnav">
+      <a id="btn_home" onClick= "location.href='inicio.html'">Home</a>
       <a id="btn_registo" onClick= "location.href='registo.php'">Registo</a>
-      <a id="btn_login" onClick= "location.href='login.php'">Login</a>
-</div>
-    <form class="form" id="forma" autocomplete="off">  
+      <a class="active" >Login</a>
+    </div>
+    <form class="form" autocomplete="off">  
       <h1>Login</h1>
       <input type="text" id="login_email" name="txt_email" placeholder="Endereço de E-mail">
       <input type="password" id="login_password" name="txt_password" placeholder="Password">
@@ -27,7 +26,6 @@
       function Validar();
   </script> 
 </body>
-</form>
 </html>
 
 <?php

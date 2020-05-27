@@ -29,10 +29,11 @@
     color: #bb86fc;
   }
 
-  h2{
+  h4{
     color: whitesmoke;
     text-align: right;
     padding-right: 10%;
+    line-height: 1.6;
   }
   
   input {

@@ -14,14 +14,13 @@ html{
     scroll-behavior: smooth;
 }
 
-#forma {
+.form {
     border: 5px solid #181818;
     background-color: #181818;
-    margin-left: 10%;
-    margin-top: 140px;
-    padding: 20px 10px 0px 40px;
-    width: 80%;
-    min-height: 760px;
+    margin-top: 90px;
+    min-height: 750px;
+    margin-left: 15%;
+    margin-right: 15%;
     border-radius: 5px;
     border-bottom: none;
     box-shadow: 0px 0px 20px 0px #000000;
@@ -34,23 +33,10 @@ h1{
     font-size: 32px;
 }
 
-h2{
-  color: white;
-  font-size: 18px;
-}
-
-a{
-  color: #bb86fc;
-  text-decoration: none;
-}
-
-a:hover{
-  color: #a860ff;
-  text-decoration: underline;
-}
 
 .topnav {
   background-color: #333;
+  height: 50px;
   overflow: hidden;
 }
 
@@ -71,12 +57,14 @@ a:hover{
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
+  cursor: pointer;
+  background-color: #bb86fca9;
   color: white;
 }
 
 #btn_registo,#btn_login{
   float:right ;
+  height: 50px;
 }
 
 
@@ -84,33 +72,6 @@ a:hover{
 input:focus, button:focus {
     outline: 0;
   }
-
-
-  
-  /* Input do login */
-  .form-login input[type=text], .form-login input[type=password]{
-    width: 90%;
-    margin: 0 0 25px 10px;
-    border-bottom: 2px solid #bb86fc;
-
-  }
-  
-  .form-login input[type=text]:focus, .form-login input[type=password]:focus {
-    transition: 1.2s;
-    width: 90%;
-    background-color: rgba(206, 206, 206, 0);
-    border-bottom: 2px solid #933bff;
-  }
-
-  .form-login input[type=text]:placeholder-shown, .form-login input[type=password]:placeholder-shown{
-    width: 80%;
-  }
-
-
- #adicionar{
-   margin-top: 50px;
-   margin-left: 20px;
- }
 
 
 /*Adicionar Tarefa*/
@@ -212,68 +173,5 @@ input {
   border-bottom-color: #bb86fc33;
   color: #bb86fc;
   border-bottom: 2px dashed #bb86fc;
-}
-
-/* Botao para alternar light/dark*/
-.switch {
-  top: 20px;
-  left: 200px;
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #bb86fc;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #bb86fc;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
 }
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<form autocomplete="off" action="registo.php" method="post">
 <head>
     <link rel="stylesheet" type="text/css" href="registo.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,9 +34,10 @@
     function Numeros();
     function Letras();
     function Limpar();
-    function Validar();
+    function Validar();s
   </script> 
 </body>
+</form>
 </html>
 
 
@@ -69,7 +71,7 @@ $sql = "INSERT INTO registo (Nome, Sobrenome, Cidade, Telefone, Email, Password)
 values ('$Nome','$Sobrenome', '$Cidade', '$Telefone', '$Email', '$Pass')";
 
 if ($conn->query($sql)){
-    header("Location: login.html");
+    header("Location: login.php");
 } else{
 echo "Error: ". $sql ."
 ". $conn->error;

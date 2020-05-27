@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<form autocomplete="off" action="registo.php" method="post">
+<form autocomplete="off" method="post" action="registo.php" >
 <head>
     <link rel="stylesheet" type="text/css" href="registo.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +11,11 @@
 
 <body>
   <div class="topnav">
-    <a id="btn_home" onClick= "location.href='inicio.html'">Home</a>
+    <a id="btn_home" onClick= "location.href='index.html'">Home</a>
     <a class="active" >Registo</a>
     <a id="btn_login" onClick= "location.href='login.php'">Login</a>
   </div>
-  <form class="form" autocomplete="off">   
+  <form class="form" id="forma" autocomplete="off" >
       <h1>Registo</h1>
       <h5>* Opcional</h5>     
       <input type="text" id="txt_nome" name="txt_nome" half placeholder="Nome" onkeypress="Letras(event)" maxlength="20">
@@ -27,8 +27,8 @@
       <input type="password" id="txt_password_2" name="txt_password2" half placeholder="Repita a Password">
       <input type="submit" id="btn_aceitar" name="baseDados" value="Feito" onclick="Validar()"> 
       <input type="button" id="btn_limpar" value="Limpar" onClick = "Limpar()"> 
-      <input type="button" id="btn_cancelar" value="Voltar" onClick= "location.href='inicio.html'" ></input> 
-</form>
+      <input type="button" id="btn_cancelar" value="Voltar" onClick= "location.href='index.html'" ></input> 
+  </form>
 
   <script src="registo.js">
     function Numeros();

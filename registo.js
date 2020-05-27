@@ -27,7 +27,7 @@ function Validar(){
          alert("As passwords não coincidem.");
     } else{
         alert("Obrigado por se registar, agora pode fazer login.");
-        location.href='inicio.html';
+        location.href='login.php';
     }
 }
 

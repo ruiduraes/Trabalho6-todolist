@@ -12,8 +12,7 @@
 <body>
 <div class="topnav">
       <a class="active">Home</a>
-      <a id="btn_registo" onClick= "location.href='registo.php'">Registo</a>
-      <a id="btn_login" onClick= "location.href='login.php'">Login</a>
+      
 </div>
     <form class="form" id="forma" autocomplete="off">  
       <h1>Login</h1>

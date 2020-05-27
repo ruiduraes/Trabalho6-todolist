@@ -50,7 +50,7 @@ body {
   border: 5px solid #181818;
   background-color: #181818;
   margin-top: 12%;
-  min-height: 415px;
+  min-height: 400 px;
   padding: 20px;
   margin-left: 30%;
   margin-right: 30%;
@@ -72,7 +72,6 @@ h5{
   line-height: 1.6;
 }
 
-<<<<<<< HEAD
 input {
   padding: 10px 15px;
   border-radius: 10px;
@@ -138,6 +137,3 @@ input[type=button]:hover,input[type=submit]:hover {
 input:focus {
   outline: 0;
 }
-=======
-
->>>>>>> 0cd88fcb5cf73b5440d82e483b67d5f39c87a179

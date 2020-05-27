@@ -9,12 +9,20 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class="topnav">
       <a id="btn_home" onClick= "location.href='inicio.html'">Home</a>
       <a id="btn_registo" onClick= "location.href='registo.php'">Registo</a>
       <a class="active" >Login</a>
     </div>
     <form class="form" autocomplete="off">  
+=======
+<div class="topnav">
+      <a class="active">Home</a>
+      
+</div>
+    <form class="form" id="forma" autocomplete="off">  
+>>>>>>> 0cd88fcb5cf73b5440d82e483b67d5f39c87a179
       <h1>Login</h1>
       <input type="text" id="login_email" name="txt_email" placeholder="Endereço de E-mail">
       <input type="password" id="login_password" name="txt_password" placeholder="Password">

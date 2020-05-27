@@ -72,6 +72,7 @@ h5{
   line-height: 1.6;
 }
 
+<<<<<<< HEAD
 input {
   padding: 10px 15px;
   border-radius: 10px;
@@ -137,3 +138,6 @@ input[type=button]:hover,input[type=submit]:hover {
 input:focus {
   outline: 0;
 }
+=======
+
+>>>>>>> 0cd88fcb5cf73b5440d82e483b67d5f39c87a179

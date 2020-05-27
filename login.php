@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<form autocomplete="off"  method="post"  action="login.php">
 <head>
-    <link rel="stylesheet" type="text/css" href="registo.css"> 
+    <link rel="stylesheet" type="text/css" href="login2.css"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,9 +13,9 @@
     <div class="topnav">
       <a id="btn_home" onClick= "location.href='inicio.html'">Home</a>
       <a id="btn_registo" onClick= "location.href='registo.php'">Registo</a>
-      <a class="active" >Login</a>
+      <a class="active">Login</a>
     </div>
-    <form class="form" autocomplete="off">  
+    <form class="form" id="forma" autocomplete="off">  
       <h1>Login</h1>
       <input type="text" id="login_email" name="txt_email" placeholder="Endereço de E-mail">
       <input type="password" id="login_password" name="txt_password" placeholder="Password">
@@ -26,6 +27,7 @@
       function Validar();
   </script> 
 </body>
+</form>
 </html>
 
 <?php
@@ -43,7 +45,12 @@ if(!empty($_POST)) {
     }
     else{
         $_SESSION['user_email'] = $user['Email'];
-        header("Location: inicio_login.html");
+
+        var_dump($user['Email']);
+
+        header("location: perfil.php?name=" . $user['Email']);
+
+
     }
 }
 ?>

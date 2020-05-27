@@ -11,16 +11,16 @@
 
 <body>
     <div class="topnav">
-      <a id="btn_home" onClick= "location.href='inicio.html'">Home</a>
+      <a id="btn_home" onClick= "location.href='index.html'">Home</a>
       <a id="btn_registo" onClick= "location.href='registo.php'">Registo</a>
       <a class="active">Login</a>
     </div>
-    <form id="forma" autocomplete="off">  
+    <form class="form" id="forma" autocomplete="off">  
       <h1>Login</h1>
       <input type="text" id="login_email" name="txt_email" placeholder="Endereço de E-mail">
       <input type="password" id="login_password" name="txt_password" placeholder="Password">
       <input type="submit" name="submit" id="btn_aceitar"  value="Login" onclick="Validar()"> 
-      <input type="button" id="btn_cancelar"  value="Voltar" onClick= "location.href='inicio.html'">
+      <input type="button" id="btn_cancelar"  value="Voltar" onClick= "location.href='index.html'">
     </form>
 
   <script src="login.js">
@@ -41,15 +41,18 @@ if(!empty($_POST)) {
     $user = $result->fetch_assoc();
 
     if($count==0) {
-        header('location: inicio.html');
+      echo  "<script>alert('Credenciais Inválidas');</script>";
     }
     else{
         $_SESSION['user_email'] = $user['Email'];
         $_SESSION['id_user'] = $user['id'];
 
-        //var_dump($user['Email']);
 
-        header("location: perfil.php?name=" . $user['Email']);
+        //var_dump($user['Email']);
+        mail($Email, 'Confirmacao', 'Confirme os dados');
+        header("location: tarefas.php");
+
+
     }
 }
 ?>

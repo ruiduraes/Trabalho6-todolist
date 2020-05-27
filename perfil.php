@@ -1,7 +1,7 @@
 <?php
 session_start();
 if($_SESSION['id_user'] == ''){
-  header("location: inicio.html");
+  header("location: index.html");
 }
 $id_user = $_SESSION['id_user'];
 

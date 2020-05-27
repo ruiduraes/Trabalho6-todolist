@@ -13,7 +13,7 @@
   <div class="topnav">
       <a type="button" class="active">Tarefas</a>
       <a type="button" id="btn_perfil" onClick= "location.href='perfil.php'">Perfil</a>
-      <a type="button" id="btn_logout" onClick= "location.href='inicio.html'">Logout</a>
+      <a type="button" id="btn_logout" onClick= "location.href='index.html'">Logout</a>
     </div>
 
     <form class="form" id="forma" autocomplete="off"><!--Cria a forma-->       

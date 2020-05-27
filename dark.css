@@ -63,6 +63,7 @@ h1{
 }
 
 #btn_registo,#btn_login{
+  cursor: pointer;
   float:right ;
   height: 50px;
 }

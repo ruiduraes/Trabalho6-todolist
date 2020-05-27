@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Maio-2020 às 00:06
+-- Tempo de geração: 26-Maio-2020 às 13:17
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.3
 
@@ -44,8 +44,7 @@ CREATE TABLE `registo` (
 
 INSERT INTO `registo` (`id`, `Nome`, `Sobrenome`, `Cidade`, `Telefone`, `Email`, `Password`) VALUES
 (1, 'Rui ', 'Durães', 'Maia', '', 'rui@ismai.pt', '123'),
-(2, 'Ricardo', 'Nogueira', 'Ermesinde', '', 'ricky17@hotmail.com', 'ricardo'),
-(3, 'Pedro ', 'Mendes', 'Maia', '', 'pedro@ismai.pt', '12345');
+(2, 'Ricardo', 'Nogueira', 'Ermesinde', '', 'ricky17@hotmail.com', 'ricardo');
 
 --
 -- Índices para tabelas despejadas
@@ -65,7 +64,7 @@ ALTER TABLE `registo`
 -- AUTO_INCREMENT de tabela `registo`
 --
 ALTER TABLE `registo`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

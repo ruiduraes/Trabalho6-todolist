@@ -26,7 +26,7 @@ if ($result = $mysqli->query($query)) {
         //echo $row['Nome'];
               
     }
-    $result->free();
+    $result->free()
 } 
 
 ?>

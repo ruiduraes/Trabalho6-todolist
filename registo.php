@@ -12,7 +12,7 @@
 <body>
   <div>   
       <h1>Registo</h1>
-      <h2>* Opcional</h2>     
+      <h4>* Opcional</h4>     
       <input type="text" id="txt_nome" name="txt_nome" half placeholder="Nome" onkeypress="Letras(event)" maxlength="20">
       <input type="text" id="txt_apelido" name="txt_apelido" half placeholder="Sobrenome" onkeypress="Letras(event)" maxlength="20">
       <input type="text" id="txt_cidade" name="txt_cidade" half placeholder="* Cidade"> 
@@ -59,17 +59,15 @@ $dbname = "to-do";
 $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
 
 if (mysqli_connect_error()){
-die('Connect Error ('. mysqli_connect_errno() .') '
+  die('Connect Error ('. mysqli_connect_errno() .') '
 . mysqli_connect_error());
-}
-else{
+} else{
 $sql = "INSERT INTO registo (Nome, Sobrenome, Cidade, Telefone, Email, Password)
 values ('$Nome','$Sobrenome', '$Cidade', '$Telefone', '$Email', '$Pass')";
-if ($conn->query($sql)){
 
+if ($conn->query($sql)){
     header("Location: login.html");
-}
-else{
+} else{
 echo "Error: ". $sql ."
 ". $conn->error;
 }

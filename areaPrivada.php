@@ -10,7 +10,8 @@
 <body>
     <div class="topnav">
       <div>
-        <a id="btn_home" onclick="location.href='inicio.html'">Home</a>
+        <a id="btn_home" onclick="location.href='index.html'">Home</a>
+        <a id="btn_sobre" onClick= "location.href='sobre.html'">Sobre Nós</a>
         <a id="area_privada" onclick="location.href='areaPrivada.html'">Perfil</a>
         <a type="file" id="imagem_perfil" ></a>
       </div>

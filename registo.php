@@ -12,7 +12,7 @@
 <body>
   <div>   
       <h1>Registo</h1>
-      <h4>* Opcional</h4>     
+      <h5>* Opcional</h5>     
       <input type="text" id="txt_nome" name="txt_nome" half placeholder="Nome" onkeypress="Letras(event)" maxlength="20">
       <input type="text" id="txt_apelido" name="txt_apelido" half placeholder="Sobrenome" onkeypress="Letras(event)" maxlength="20">
       <input type="text" id="txt_cidade" name="txt_cidade" half placeholder="* Cidade"> 
@@ -20,7 +20,7 @@
       <input type="text" id="txt_email" name="txt_email" placeholder="Endereço de E-mail">
       <input type="password" id="txt_password" name="txt_password" half placeholder="Password"> 
       <input type="password" id="txt_password_2" name="txt_password2" half placeholder="Repita a Password">
-      <input type="submit" id="btn_aceitar" name="baseDados" value="Feito" onclick="Validar()" > 
+      <input type="submit" id="btn_aceitar" name="baseDados" value="Feito" onclick="Validar()"> 
       <input type="button" id="btn_limpar" value="Limpar" onClick = "Limpar()"> 
       <input type="button" id="btn_cancelar" value="Voltar" onClick= "location.href='inicio.html'" ></input> 
   </div>

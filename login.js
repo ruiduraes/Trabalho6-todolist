@@ -7,21 +7,12 @@ function Validar() {
     //Expressao regular de um email, nome@dominio.url.
 
 
-    if(email=="")
-    {
+    if(email==""){
         errorbox("Introduza o seu email.")
-    }
-    
-    else if(!expresion.test(email))
-    {
+    }else if(!expresion.test(email)) {
         //verifica a expressao do email
         errorbox("Endereço de email errado.");
-    } 
-
-    else if(password=="")
-    {
+    }else if(password==""){
         errorbox("Introduza a password")
     }
-
-    
 }

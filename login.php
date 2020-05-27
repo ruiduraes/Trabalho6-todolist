@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<form autocomplete="off" method="post" action="php/login.php">
+<form autocomplete="off" method="post" action="login.php">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/login.css"> 
+    <link rel="stylesheet" type="text/css" href="login.css"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -27,29 +27,20 @@
 
 <?php
 session_start(); // Starting Session
-$error = ''; // Variable To Store Error Message
-if (isset($_POST['submit'])) {
-if (empty($_POST['txt_email']) || empty($_POST['txt_password'])) {
-  die(header("location:login.php"));
-}
-else{
-// Define $username and $password
-$Email = $_POST['txt_email'];
-$Pass = $_POST['txt_password'];
-// mysqli_connect() function opens a new connection to the MySQL server.
-$conn = mysqli_connect("localhost", "root", "", "to-do");
-// SQL query to fetch information of registerd users and finds user match.
-$query = "SELECT Email, password from registo where Email=? AND password=? LIMIT 1";
-// To protect MySQL injection for Security purpose
-$stmt = $conn->prepare($query);
-$stmt->bind_param($Email, $Pass);
-$stmt->execute();
-$stmt->bind_result($Email, $Pass);
-$stmt->store_result();
-if($stmt->fetch()) //fetching the contents of the row {
-$_SESSION['txt_email'] = $Email; // Initializing Session
-header("location: inicio_login.html"); // Redirecting To Profile Page
-}
+include "connection.php";
 
+if(!empty($_POST)) {
+    $result = mysqli_query($conn,"SELECT Email, Password FROM registo Where Email='" .$_POST["txt_email"] . "' and Password ='" . $_POST["txt_password"]. "'");
+
+    $count = mysqli_num_rows($result);
+    $user = $result->fetch_assoc();
+
+    if($count==0) {
+        header('location: inicio.html');
+    }
+    else{
+        $_SESSION['user_email'] = $user['Email'];
+        header("Location: inicio_login.html");
+    }
 }
 ?>

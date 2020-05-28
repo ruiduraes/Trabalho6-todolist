@@ -177,3 +177,9 @@ input {
   border-bottom: 2px dashed #bb86fc;
 }
 
+h4{
+  text-align: center;
+  padding: 10px;
+  color: #ddd;
+}
+

@@ -34,7 +34,6 @@ h1{
     font-size: 24px;
 }
 
-
 .topnav {
   background-color: #333;
   height: 50px;
@@ -70,14 +69,38 @@ h1{
   height: 50px;
 }
 
+.table{
+  margin-top: 100px;
+}
+
+.titulo{
+  text-align: center;
+  font-size: 300%;
+}
+
+.icone{
+  margin-left: 780px;
+  height: 10px;
+}
+
+.img {
+  height: 400px;
+  padding-top: 100px;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.frase{
+  color: #fff;
+  font-size: 140%;
+}
+
 
 /* Serve para quando um botao for selecionado nao fique o contorno */
 input:focus, button:focus {
     outline: 0;
-  }
+}
 
-
-/*Adicionar Tarefa*/
 
 /* Lista das tarefas adicionadas */
 ul li {
@@ -177,4 +200,26 @@ input {
   color: #bb86fc;
   border-bottom: 2px dashed #bb86fc;
 }
+
+.rowFooter {
+  width: 100%;
+}
+
+.footer {
+  position: relative;
+  margin-top: 90px;
+  width: 100%;
+  height: 40%;
+  background-color: #333;
+  color: #fff;
+}
+
+#todo{
+  text-align: left;
+}
+
+#social{
+  text-align: right;
+}
+
 

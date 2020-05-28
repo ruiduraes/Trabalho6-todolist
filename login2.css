@@ -122,11 +122,13 @@
   }
   
   #btn_aceitar{
-    color: rgb(122, 208, 82);  
+    color: rgb(122, 208, 82); 
+    width : 100px;
   }
    
   #btn_cancelar{
     color: rgb(208, 82, 82); 
+    width : 100px;
   }
   
   input[type=button]:hover,input[type=submit]:hover {

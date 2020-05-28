@@ -6,7 +6,6 @@ function validar() {
     var expresion = /\w+@\w+\.+[a-z]{2,3}/; 
     //Expressao regular de um email, nome@dominio.url.
 
-
     if(email==""){
         errorbox("Introduza o seu email.")
     }else if(!expresion.test(email)) {

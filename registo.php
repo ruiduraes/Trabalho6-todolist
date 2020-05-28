@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<form autocomplete="off" method="post" action="registo.php" >
-<head>
-    <link rel="stylesheet" type="text/css" href="registo.css"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registo</title>
-</head>
+  <head>
+      <link rel="stylesheet" type="text/css" href="registo.css"> 
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Registo</title>
+  </head>
 
-<body>
-  <div class="topnav">
-    <a id="btn_home" onClick= "location.href='index.html'">Home</a>
-    <a class="active" >Registo</a>
-    <a id="btn_login" onClick= "location.href='login.php'">Login</a>
-  </div>
-  <form class="form" id="forma" autocomplete="off" >
-      <h1>Registo</h1>
-      <h5>* Opcional</h5>     
-      <input type="text" id="txt_nome" name="txt_nome" half placeholder="Nome" onkeypress="Letras(event)" maxlength="20">
-      <input type="text" id="txt_apelido" name="txt_apelido" half placeholder="Sobrenome" onkeypress="Letras(event)" maxlength="20">
-      <input type="text" id="txt_cidade" name="txt_cidade" half placeholder="* Cidade"> 
-      <input type="text" id="txt_telf" name="txt_telf" half placeholder="* Telefone" onkeypress="Numeros(event)" minlenght="9" maxlength="9">
-      <input type="text" id="txt_email" name="txt_email" placeholder="Endereço de E-mail">
-      <input type="password" id="txt_password" name="txt_password" half placeholder="Password"> 
-      <input type="password" id="txt_password_2" name="txt_password2" half placeholder="Repita a Password">
-      <input type="submit" id="btn_aceitar" name="baseDados" value="Feito" onclick="Validar()"> 
-      <input type="button" id="btn_limpar" value="Limpar" onClick = "Limpar()"> 
-      <input type="button" id="btn_cancelar" value="Voltar" onClick= "location.href='index.html'" ></input> 
-  </form>
+  <body>
+    <form autocomplete="off" method="post" action="registo.php" >
 
-  <script src="registo.js">
-    function Numeros();
-    function Letras();
-    function Limpar();
-    function Validar();s
-  </script> 
-</body>
-</form>
+    <div class="topnav">
+      <a id="btn_home" onClick= "location.href='index.html'">Home</a>
+      <a class="active">Registo</a>
+      <a id="btn_login" onClick= "location.href='login.php'">Login</a>
+    </div>
+    
+    <div class="form" id="forma" autocomplete="off" >
+        <h1>Registo</h1>
+        <h5>* Opcional</h5>     
+        <input type="text" id="txt_nome" name="txt_nome" half placeholder="Nome" onkeypress="letras(event)" maxlength="20">
+        <input type="text" id="txt_apelido" name="txt_apelido" half placeholder="Sobrenome" onkeypress="letras(event)" maxlength="20">
+        <input type="text" id="txt_cidade" name="txt_cidade" half placeholder="* Cidade"> 
+        <input type="text" id="txt_telf" name="txt_telf" half placeholder="* Telefone" onkeypress="numeros(event)" minlenght="9" maxlength="9">
+        <input type="text" id="txt_email" name="txt_email" placeholder="Endereço de E-mail">
+        <input type="password" id="txt_password" name="txt_password" half placeholder="Password"> 
+        <input type="password" id="txt_password_2" name="txt_password2" half placeholder="Repita a Password">
+        <input type="submit" id="btn_aceitar" name="baseDados" value="Feito" onclick="validar()"> 
+        <input type="button" id="btn_limpar" value="Limpar" onClick = "Limpar()"> 
+        <input type="button" id="btn_cancelar" value="Voltar" onClick= "location.href='index.html'" ></input> 
+    </div>
+
+    <script src="registo.js" type="text/javascript"></script> 
+
+    </form>
+  </body>
 </html>
 
 

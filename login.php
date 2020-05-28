@@ -21,7 +21,7 @@
       <h1>Login</h1>
       <input type="text" id="login_email" name="txt_email" placeholder="Endereço de E-mail">
        <input type="password" id="login_password" name="txt_password" placeholder="Password">
-       <input type="submit" name="submit" id="btn_aceitar"  value="Login" onclick="Validar()"> 
+       <input type="submit" name="submit" id="btn_aceitar"  value="Login" onclick="validar()"> 
        <input type="button" id="btn_cancelar"  value="Voltar" onClick= "location.href='index.html'">
     </div>
 
@@ -32,7 +32,8 @@
 </html>
 
 <?php
-session_start(); // Starting Session
+// Starting Session
+session_start(); 
 include "connection.php";
 
 if(!empty($_POST)) {

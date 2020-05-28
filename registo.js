@@ -5,7 +5,7 @@ function submitForm(){
     } 
 }
 
-function Validar(){
+function validar(){
     var nome = document.getElementById("txt_nome").value;
     var apelido = document.getElementById("txt_apelido").value;
     var email = document.getElementById("txt_email").value;
@@ -31,7 +31,7 @@ function Validar(){
     }
 }
 
-function Limpar(){
+function limpar(){
     var limpeza = "";
     document.getElementById("txt_nome").value = limpeza;
     document.getElementById("txt_apelido").value = limpeza;
@@ -42,7 +42,7 @@ function Limpar(){
     document.getElementById("txt_password_2").value = limpeza;
 }
 
-function Numeros(evt){
+function numeros(evt){
     //Funcao que apenas permite o input de numeros
     var theEvent = evt || window.event;
 
@@ -60,7 +60,7 @@ function Numeros(evt){
     }
 }
 
-function Letras(evt){
+function letras(evt){
     //Funcao que permite apenas o input de letras
     var theEvent = evt || window.event;
 

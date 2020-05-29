@@ -206,19 +206,8 @@ input {
   width: 100%;
 }
 
-.footer {
-
-  width: 100%;
+footer{
   background-color: #333;
-  color: #fff;
-  text-align: center;
-  margin-top: 1rem;
-}
-#todo{
-  text-align: left;
-}
-
-#social{
   text-align: center;
 }
 

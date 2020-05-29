@@ -69,7 +69,14 @@ $sql = "INSERT INTO registo (Nome, Sobrenome, Cidade, Telefone, Email, Password)
 values ('$Nome','$Sobrenome', '$Cidade', '$Telefone', '$Email', '$Pass')";
 
 if ($conn->query($sql)){
-    header("Location: login.php");
+  $to = $Email;
+  $subject = "To-Do";
+  $txt = "$Nome $Sobrenome obrigado por se ter registado!";
+  $headers = "From: to-do@ismai.pt" . "\r\n" .
+"CC: to-do-team@ismai.pt";
+
+  mail($to,$subject,$txt,$headers);
+  header("Location: login.php");
 } else{
 echo "Error: ". $sql ."
 ". $conn->error;

@@ -50,7 +50,6 @@ if(!empty($_POST)) {
         $_SESSION['id_user'] = $user['id'];
 
         //var_dump($user['Email']);
-        mail($Email, 'Confirmacao', 'Confirme os dados');
         header("location: tarefas.php");
     }
 }

@@ -70,6 +70,36 @@ h1{
   height: 50px;
 }
 
+
+#ajudar{
+  font-size: 200%;
+  color:#fff;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+
+h2{
+  color: #fff;
+  font-size: 300%;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.blocktext{
+  color: #fff;
+  font-size: 120%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 20em;
+  line-height: 1.6;
+
+}
+
+
+
+
 .table{
   margin-top: 100px;
 }

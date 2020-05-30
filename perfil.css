@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    background-color: #181818;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+
+#formaPerfil {
+  border: 5px solid #181818;
+  background-color: #181818;
+  margin-top: 90px;
+  min-height: 700px;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-radius: 5px;
+  border-bottom: none;
+  box-shadow: 0px 0px 20px 0px #000000;
+}
+
+h1{
+    color: #bb86fc;
+    margin: 40px;
+    text-align: center;
+    font-size: 32px;
+}
+
+h2{
+  color: #f2f2f2;
+  text-align: left;
+  margin-left: 35%;
+  line-height: 200%;
+
+}
+
+#avatar{
+  color: #bb86fc;
+}
+
+
+.topnav {
+  background-color: #333;
+  height: 50px;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#name{
+  text-align: right;
+  color: #bb86fc;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  cursor: pointer;
+  background-color: #bb86fca9;
+  color: white;
+  height: 50px;
+}
+
+#btn_logout{
+  cursor: pointer;
+  float:right ;
+  height: 50px;
+}
+
+
+/* Serve para quando um botao for selecionado nao fique o contorno */
+input:focus, button:focus {
+    outline: 0;
+  }
+
+
+

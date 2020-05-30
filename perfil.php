@@ -36,7 +36,7 @@ if ($result = $mysqli->query($query)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="tarefas.css"> <!--Juncao com a pagina css-->
+    <link rel="stylesheet" type="text/css" href="perfil.css"> <!--Juncao com a pagina css-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -55,16 +55,14 @@ if ($result = $mysqli->query($query)) {
     <p> Bem vindo, <?=$nome?> <?=$sobrenome?></p>
   </div>
     
-  <form class="form" id="forma" autocomplete="off"><!--Cria a forma-->       
+  <form class="form" id="formaPerfil" autocomplete="off"><!--Cria a forma-->       
     <h1>Dados Pessoais</h1>
-    <h1><?=$nome?></h1>
-    <h1><?=$sobrenome?></h1>
-    <h1><?=$email?></h1>
-    <h1><?=$cidade?></h1>
-    <h1><?=$telefone?></h1>
+    <h2>Nome: <?=$nome?> <?=$sobrenome?></h2>
+    <h2>Email: <?=$email?></h2>
+    <h2>Cidade: <?=$cidade?></h2>
+    <h2>Telefone: <?=$telefone?></h2>
 
-    <input type="file"></input>
-  </form>
+    <input type="file" name="myImage" accept="do.utilizador.png" />
         
   <script src="inicio.js"></script>
 

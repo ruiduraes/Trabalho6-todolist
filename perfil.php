@@ -16,9 +16,11 @@ $query = "SELECT * FROM registo WHERE id = $id_user " ;
  
 if ($result = $mysqli->query($query)) {
     while ($row = $result->fetch_assoc()) {
-        $Email = $row['Email'];
-        $id = $row["id"];
         $nome = $row['Nome'];
+        $sobrenome = $row["Sobrenome"];
+        $email = $row['Email'];
+        $cidade = $row['Cidade'];
+        $telefone = $row['Telefone'];
         //echo $Email;
         //echo '<br>';
         //echo $row['id'];
@@ -44,27 +46,30 @@ if ($result = $mysqli->query($query)) {
 <body>
 
   <div class="topnav">
-      <a type="button" id="btn_tarefas" onClick= "location.href='tarefas.php'">Tarefas</a>
-      <a type="button" class="active">Perfil</a>
-      <a type="button" id="btn_logout" onClick= "location.href='logout.php'">Logout</a>
-    </div>
+    <a type="button" id="btn_tarefas" onClick= "location.href='tarefas.php'">Tarefas</a>
+    <a type="button" class="active">Perfil</a>
+    <a type="button" id="btn_logout" onClick= "location.href='logout.php'">Logout</a>
+  </div>
+
+  <div id="name">
+    <p> Bem vindo, <?=$nome?> <?=$sobrenome?></p>
+  </div>
     
-    <form class="form" id="forma" autocomplete="off"><!--Cria a forma-->       
+  <form class="form" id="forma" autocomplete="off"><!--Cria a forma-->       
     <h1>Dados Pessoais</h1>
     <h1><?=$nome?></h1>
-    <h1><?=$Email?></h1>
-
-
+    <h1><?=$sobrenome?></h1>
+    <h1><?=$email?></h1>
+    <h1><?=$cidade?></h1>
+    <h1><?=$telefone?></h1>
 
     <input type="file"></input>
-    
   </form>
         
-    <script src="inicio.js">
-    </script>
+  <script src="inicio.js"></script>
 
-  </body>
-  </html>
+</body>
+</html>
 
 
 

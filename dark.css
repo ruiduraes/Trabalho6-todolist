@@ -206,7 +206,7 @@ input {
   width: 100%;
 }
 
-footer{
+#footer{
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -214,6 +214,8 @@ footer{
   text-align: center;
   margin-top: 10%;
 }
+
+
 
 
 

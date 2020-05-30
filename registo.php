@@ -71,7 +71,7 @@ values ('$Nome','$Sobrenome', '$Cidade', '$Telefone', '$Email', '$Pass')";
 if ($conn->query($sql)){
   $to = $Email;
   $subject = "To-Do";
-  $txt = "$Nome $Sobrenome obrigado por se ter registado!";
+  $txt = "$Nome $Sobrenome obrigado por se ter registado, para confirmar a sua conta clique neste link: http://localhost/to-do/Trabalho6-todolist/verificado .";
   $headers = "From: to-do@ismai.pt" . "\r\n" .
 "CC: to-do-team@ismai.pt";
 

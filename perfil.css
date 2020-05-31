@@ -18,7 +18,7 @@ html{
   border: 5px solid #181818;
   background-color: #181818;
   margin-top: 90px;
-  min-height: 700px;
+  min-height: 125px;
   margin-left: 25%;
   margin-right: 25%;
   border-radius: 5px;
@@ -38,8 +38,33 @@ h2{
   text-align: left;
   margin-left: 35%;
   line-height: 200%;
-
 }
+
+.tabela{
+  margin-top: 5px;
+}
+
+#boneco{
+  width: 40%;
+  height: 40%; 
+  margin-left: 60%;
+}
+
+p{
+  color: #fff;
+  font-size: 130%;
+  line-height: 1.6;
+  margin-left: 9%;
+}
+
+#bemvindo{
+  color: #bb86fc;
+  font-size: 100%;
+}
+
+
+
+
 
 #avatar{
   color: #bb86fc;

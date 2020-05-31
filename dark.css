@@ -70,14 +70,12 @@ h1{
   height: 50px;
 }
 
-
 #ajudar{
   font-size: 200%;
   color:#fff;
   margin-left: 10%;
   margin-top: 10%;
 }
-
 
 h2{
   color: #fff;
@@ -95,7 +93,6 @@ h2{
   height: 80%; 
   margin-left: 200%;
 }
-
 
 .blocktext{
   color: #fff;
@@ -141,12 +138,10 @@ h2{
   font-size: 140%;
 }
 
-
 /* Serve para quando um botao for selecionado nao fique o contorno */
 input:focus, button:focus {
     outline: 0;
 }
-
 
 /* Lista das tarefas adicionadas */
 ul li {
@@ -203,7 +198,6 @@ ul li.checked::before {
   color: rgb(255, 0, 0);
 }
 
-
 /* "Limpa" a parte de baixo do input da tarefa */
 .header:after {
   content: "";
@@ -259,9 +253,3 @@ input {
   text-align: center;
   margin-top: 10%;
 }
-
-
-
-
-
-

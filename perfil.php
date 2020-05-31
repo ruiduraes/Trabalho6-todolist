@@ -52,17 +52,25 @@ if ($result = $mysqli->query($query)) {
   </div>
 
   <div id="name">
-    <p> Bem vindo, <?=$nome?> <?=$sobrenome?></p>
+    <p id="bemvindo"> Bem vindo, <?=$nome?> <?=$sobrenome?></p>
   </div>
-    
-  <form class="form" id="formaPerfil" autocomplete="off"><!--Cria a forma-->       
-    <h1>Dados Pessoais</h1>
-    <h2>Nome: <?=$nome?> <?=$sobrenome?></h2>
-    <h2>Email: <?=$email?></h2>
-    <h2>Cidade: <?=$cidade?></h2>
-    <h2>Telefone: <?=$telefone?></h2>
 
-    <input type="file" name="myImage" accept="do.utilizador.png" />
+  <h1>Dados Pessoais</h1>
+
+  <form class="form" id="formaPerfil" autocomplete="off"><!--Cria a forma-->
+  <table class = "tabela">
+    <tr>
+      <td>
+        <p>Nome: <?=$nome?> <?=$sobrenome?></p>
+        <p>Email: <?=$email?></p>
+        <p>Cidade: <?=$cidade?></p>
+        <p>Telefone: <?=$telefone?></p>
+      </td>
+      <td><img src="user.png"  id="boneco"></td> 
+    </tr>
+  </table>       
+  </form>
+
         
   <script src="inicio.js"></script>
 

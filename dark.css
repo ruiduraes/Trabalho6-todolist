@@ -83,22 +83,29 @@ h2{
   color: #fff;
   font-size: 300%;
   text-align: center;
+  margin-top: 5%;
+}
+
+.tabela{
   margin-top: 7%;
+}
+
+#imgsobre{
+  width: 60%;
+  height: 60%; 
+  float: right;
+  margin-left: 40%;
 }
 
 
 .blocktext{
   color: #fff;
   font-size: 120%;
-  margin-left: 25%;
+  margin-left: 40%;
   margin-top: 5%;
   width: 20em;
   line-height: 1.6;
-
 }
-
-
-
 
 .table{
   margin-top: 100px;

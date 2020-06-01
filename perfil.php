@@ -73,7 +73,8 @@ if ($result = $mysqli->query($query)) {
         </div>
     </td> 
     </tr>
-  </table>       
+  </table> 
+  <button type="button" id="btn_editar" onClick= "location.href='editarperfil.php'">Editar</button>    
   </form>
 
         

@@ -24,7 +24,8 @@ if ($result = $mysqli->query($query)) {
         //echo $row['Nome'];       
     }
     $result->free();
-} 
+}
+
 ?>
 
 
@@ -50,12 +51,13 @@ if ($result = $mysqli->query($query)) {
     <p> Bem vindo, <?=$nome?> <?=$sobrenome?></p>
   </div>
 
-  <form class="form" id="forma" autocomplete="off"><!--Cria a forma-->       
+  <form class="form" id="forma" autocomplete="off" method="post" action="tarefas.php"><!--Cria a forma-->       
     <h1>Lista To-Do</h1>
     <div id="myDIV" class="header">
-      <input type="text" id="myInput" placeholder="Adicione aqui a sua tarefa...">
-      <span onclick="newElement()" type="submit" class="addBtn">Adicionar</span>
+      <input type="text" name="descricao" id="myInput" placeholder="Adicione aqui a sua tarefa...">
+      <button type="submit" id="btn_adicionar" class="addBtn">Adicionar</button>
     </div>
+    <p>Tarefa: <?=$descricao?></p>
     <ul id="myUL"></ul><!--Onde as tarefas serão guardadas-->
   </form>
         
@@ -63,3 +65,25 @@ if ($result = $mysqli->query($query)) {
 
 </body>
 </html>
+
+<?php
+include "connection.php";
+$username = "root"; 
+$password = ""; 
+$database = "to-do"; 
+$mysqli = new mysqli("localhost", $username, $password, $database); 
+
+$query = "SELECT * FROM tarefa WHERE id_user = $id_user " ;
+
+if(!empty($_POST)) {
+
+
+$descricao = $_POST["descricao"];
+
+mysqli_query($conn,"INSERT INTO tarefa (descricao, id_user) values ('$descricao','$id_user')");
+
+
+
+    
+}
+?>

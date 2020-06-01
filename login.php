@@ -37,14 +37,18 @@ session_start();
 include "connection.php";
 
 if(!empty($_POST)) {
-    $result = mysqli_query($conn,"SELECT Email, Password,id FROM registo Where Email='" .$_POST["txt_email"] . "' and Password ='" . $_POST["txt_password"]. "'");
+    $result = mysqli_query($conn,"SELECT Email, Password,id, verificado FROM registo Where Email='" .$_POST["txt_email"] . "' and Password ='" . $_POST["txt_password"]. "'");
 
     $count = mysqli_num_rows($result);
     $user = $result->fetch_assoc();
-
+    $_SESSION['user_verificado'] = $user['verificado'];
     if($count==0) {
-      echo  "<script>alert('Credenciais Inválidas');</script>";
-    }else{
+      echo  "<script>alert('Email ou Password Inválida');</script>";
+    }
+    else if($user['verificado'] == NULL){
+      echo  "<script>alert('O seu email não se encontra validado');</script>";
+    }
+    else{
         $_SESSION['user_email'] = $user['Email'];
         $_SESSION['id_user'] = $user['id'];
 

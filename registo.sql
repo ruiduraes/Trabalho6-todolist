@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Maio-2020 às 13:17
+-- Tempo de geração: 01-Jun-2020 às 12:18
 -- Versão do servidor: 10.4.11-MariaDB
--- versão do PHP: 7.4.3
+-- versão do PHP: 7.2.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -29,22 +29,27 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `registo` (
-  `id` int(10) NOT NULL,
-  `Nome` varchar(30) NOT NULL,
-  `Sobrenome` varchar(30) NOT NULL,
-  `Cidade` varchar(30) DEFAULT NULL,
-  `Telefone` varchar(30) DEFAULT NULL,
-  `Email` varchar(50) NOT NULL,
-  `Password` varchar(30) NOT NULL
+  `id` int(11) NOT NULL,
+  `Nome` varchar(255) NOT NULL,
+  `Sobrenome` varchar(255) NOT NULL,
+  `Cidade` varchar(255) DEFAULT NULL,
+  `Telefone` int(9) DEFAULT NULL,
+  `Email` varchar(255) NOT NULL,
+  `PASSWORD` varchar(255) NOT NULL,
+  `verificado` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `registo`
 --
 
-INSERT INTO `registo` (`id`, `Nome`, `Sobrenome`, `Cidade`, `Telefone`, `Email`, `Password`) VALUES
-(1, 'Rui ', 'Durães', 'Maia', '', 'rui@ismai.pt', '123'),
-(2, 'Ricardo', 'Nogueira', 'Ermesinde', '', 'ricky17@hotmail.com', 'ricardo');
+INSERT INTO `registo` (`id`, `Nome`, `Sobrenome`, `Cidade`, `Telefone`, `Email`, `PASSWORD`, `verificado`) VALUES
+(20, 'dsa', 'asd', '', 0, 'asdasd@dsfsdf.sdf', '123', 1),
+(21, 'asd', 'sad', '', 0, 'asd@gmail.com', '123', 1),
+(22, 'asd', 'asd', '', 0, 'dd@sdf.sdf', 'asd', NULL),
+(24, 'Ricardo', 'Nogueira', 'Ermesinde', 0, 'ricardito@gmail.com', '123', 1),
+(25, 'Jorge', 'Amaral', 'Ermesinde', 0, 'jorge@gmail.com', '123', 1),
+(26, 'Rui', 'Duraes', 'Maia', 0, 'rui@gmail.com', '123', 1);
 
 --
 -- Índices para tabelas despejadas
@@ -64,7 +69,7 @@ ALTER TABLE `registo`
 -- AUTO_INCREMENT de tabela `registo`
 --
 ALTER TABLE `registo`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

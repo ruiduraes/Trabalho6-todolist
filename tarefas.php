@@ -17,13 +17,27 @@ if ($result = $mysqli->query($query)) {
     while ($row = $result->fetch_assoc()) {
         $nome = $row['Nome'];
         $sobrenome = $row["Sobrenome"];
-        //echo $Email;
+        //echo $Email;  
         //echo '<br>';
         //echo $row['id'];
         //echo '<br>';
         //echo $row['Nome'];       
     }
     $result->free();
+}
+
+
+if($mysqli->connect_errno > 0){
+  die('Unable to connect to database [' . $mysqli->connect_error . ']');
+  }
+$sql ='SELECT * FROM tarefa WHERE id_user = id_user';
+
+if(!$result = $mysqli->query($sql)){
+    die('There was an error running the query [' . $mysqli->error . ']');
+}
+while($row = $result->fetch_assoc()){
+  $tarefas = $row['descricao'];
+  print_r($tarefas);
 }
 
 ?>
@@ -57,8 +71,13 @@ if ($result = $mysqli->query($query)) {
       <input type="text" name="descricao" id="myInput" placeholder="Adicione aqui a sua tarefa...">
       <button type="submit" id="btn_adicionar" class="addBtn">Adicionar</button>
     </div>
-    <p>Tarefa: <?=$descricao?></p>
-    <ul id="myUL"></ul><!--Onde as tarefas serão guardadas-->
+    <ul id="myUL">
+    <?php foreach ($tarefas as $tarefa)
+      {
+      echo'<td>'. $row['descricao']."</td>";
+      }
+    ?>
+    </ul  ><!--Onde as tarefas serão guardadas-->
   </form>
         
   <script src="inicio.js"></script>
@@ -76,14 +95,11 @@ $mysqli = new mysqli("localhost", $username, $password, $database);
 $query = "SELECT * FROM tarefa WHERE id_user = $id_user " ;
 
 if(!empty($_POST)) {
-
-
-$descricao = $_POST["descricao"];
-
-mysqli_query($conn,"INSERT INTO tarefa (descricao, id_user) values ('$descricao','$id_user')");
-
-
-
-    
+  $descricao = $_POST["descricao"];
+  mysqli_query($conn,"INSERT INTO tarefa (descricao, id_user) values ('$descricao','$id_user')");
+  header("Location: landing.php");
 }
+
+
+  
 ?>

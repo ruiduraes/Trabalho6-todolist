@@ -35,9 +35,9 @@ $sql ='SELECT * FROM tarefa WHERE id_user = id_user';
 if(!$result = $mysqli->query($sql)){
     die('There was an error running the query [' . $mysqli->error . ']');
 }
+$t = $result -> fetch_all(PDO::FETCH_ASSOC);
 while($row = $result->fetch_assoc()){
   $tarefas = $row['descricao'];
-  print_r($tarefas);
 }
 
 ?>
@@ -72,9 +72,13 @@ while($row = $result->fetch_assoc()){
       <button type="submit" id="btn_adicionar" class="addBtn">Adicionar</button>
     </div>
     <ul id="myUL">
-    <?php foreach ($tarefas as $tarefa)
+    <?php foreach ($t as $tarefa)
       {
-      echo'<td>'. $row['descricao']."</td>";
+      echo '<a href="selecionar.php?id='.$tarefa[0].'" id="btn_selecionar" style="float:left">Selecionar</a>';
+      echo '<li>'. $tarefa[1];
+      echo '<a href="eliminar.php?id='.$tarefa[0].'" id="btn_eliminar" style="float:right">Eliminar</a>';
+      echo '</li>';
+      echo '<br>';
       }
     ?>
     </ul  ><!--Onde as tarefas serão guardadas-->
@@ -99,7 +103,6 @@ if(!empty($_POST)) {
   mysqli_query($conn,"INSERT INTO tarefa (descricao, id_user) values ('$descricao','$id_user')");
   header("Location: landing.php");
 }
-
 
   
 ?>

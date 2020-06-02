@@ -66,12 +66,6 @@ if ($result = $mysqli->query($query)) {
         <p>Cidade: <?=$cidade?></p>
         <p>Telefone: <?=$telefone?></p>
       </td>
-      <td>
-        <img src="user.png"  id="boneco">
-        <div class="myImage">
-          <input type="file" name="myImage" accept="do.utilizador.png" />
-        </div>
-    </td> 
     </tr>
   </table> 
   <button type="button" id="btn_editar" onClick= "location.href='editarperfil.php'">Editar</button>    

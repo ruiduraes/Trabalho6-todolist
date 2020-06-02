@@ -74,9 +74,8 @@ while($row = $result->fetch_assoc()){
     <ul id="myUL">
     <?php foreach ($t as $tarefa)
       {
-      echo '<a href="selecionar.php?id='.$tarefa[0].'" id="btn_selecionar" style="float:left">Selecionar</a>';
       echo '<li>'. $tarefa[1];
-      echo '<a href="eliminar.php?id='.$tarefa[0].'" id="btn_eliminar" style="float:right">Eliminar</a>';
+      echo '<a href="eliminar.php?id='.$tarefa[0].'" id="btn_eliminar" style="float:right">X</a>';
       echo '</li>';
       echo '<br>';
       }

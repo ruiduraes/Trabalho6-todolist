@@ -80,6 +80,32 @@ h1{
   border: 0;
   margin-top: 1%;
 }
+#btn_eliminar{
+  background-color: rgba(179, 51, 51, 0);
+  border: none;
+  color: rgb(179, 51, 51);
+  padding: 0px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;  
+  cursor: pointer;
+  font-size: 22px;
+}
+
+#btn_eliminar:hover{
+  background-color: rgba(179, 51, 51, 0);
+  border: none;
+  color: rgb(255, 0, 0);
+  padding: 0px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;  
+  cursor: pointer;
+  font-size: 22px;
+}
+
 
 /* Serve para quando um botao for selecionado nao fique o contorno */
 input:focus, button:focus {
@@ -102,47 +128,6 @@ ul li {
   margin-left: 15%;
 }
 
-/* Número das listas ímpares */
-ul li:nth-child(odd) {
-  background: rgba(0, 0, 0, 0.03);
-}
-
-ul li.checked {
-  background: rgba(255, 255, 255, 0.1);
-  color: #bb86fc;
-}
-
-ul li:hover {
-  background: rgba(0, 0, 0, 0.30);
-}
-
-/* Visto */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Botão de eliminar tarefa */
-.close {
-  color: rgba(255, 0, 38, 0.4);
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: rgba(0, 0, 0, 0.15);
-  color: rgb(255, 0, 0);
-}
 
 
 /* "Limpa" a parte de baixo do input da tarefa */

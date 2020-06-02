@@ -36,7 +36,6 @@ if(!$result = $mysqli->query($query)){
     die('There was an error running the query [' . $mysqli->error . ']');
 }
 $t = $result -> fetch_all(PDO::FETCH_ASSOC);
-print_r($query);
 while($row = $result->fetch_assoc()){
   $tarefas = $row['descricao'];
 }

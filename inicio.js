@@ -32,15 +32,7 @@ for (i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(span);
 }
 
-// Clicar no botão fechar para eliminar a tarefa
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
+
 
 // Adiciona um visto na tarefa
 var list = document.querySelector('ul');

@@ -26,16 +26,17 @@ if ($result = $mysqli->query($query)) {
     $result->free();
 }
 
-
 if($mysqli->connect_errno > 0){
   die('Unable to connect to database [' . $mysqli->connect_error . ']');
   }
-$sql ='SELECT * FROM tarefa WHERE id_user = id_user';
+  
+$query ="SELECT * FROM tarefa WHERE id_user = $id_user";
 
-if(!$result = $mysqli->query($sql)){
+if(!$result = $mysqli->query($query)){
     die('There was an error running the query [' . $mysqli->error . ']');
 }
 $t = $result -> fetch_all(PDO::FETCH_ASSOC);
+print_r($query);
 while($row = $result->fetch_assoc()){
   $tarefas = $row['descricao'];
 }
@@ -96,7 +97,7 @@ $password = "";
 $database = "to-do"; 
 $mysqli = new mysqli("localhost", $username, $password, $database); 
 
-$query = "SELECT * FROM tarefa WHERE id_user = $id_user " ;
+
 
 if(!empty($_POST)) {
   $descricao = $_POST["descricao"];

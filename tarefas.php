@@ -58,7 +58,7 @@ if ($result = $mysqli->query($query)) {
       <button type="submit" id="btn_adicionar" class="addBtn">Adicionar</button>
     </div>
     <p>Tarefa: <?=$descricao?></p>
-    <ul id="myUL"></ul><!--Onde as tarefas serão guardadas-->
+    <ul id="myUL">Ola</ul><!--Onde as tarefas serão guardadas-->
   </form>
         
   <script src="inicio.js"></script>
@@ -76,14 +76,8 @@ $mysqli = new mysqli("localhost", $username, $password, $database);
 $query = "SELECT * FROM tarefa WHERE id_user = $id_user " ;
 
 if(!empty($_POST)) {
-
-
-$descricao = $_POST["descricao"];
-
-mysqli_query($conn,"INSERT INTO tarefa (descricao, id_user) values ('$descricao','$id_user')");
-
-
-
-    
+  $descricao = $_POST["descricao"];
+  mysqli_query($conn,"INSERT INTO tarefa (descricao, id_user) values ('$descricao','$id_user')"); 
 }
+
 ?>

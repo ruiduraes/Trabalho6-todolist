@@ -52,7 +52,9 @@ h1{
 
 #name{
   text-align: right;
-  color: #bb86fc;
+  color: #fff;
+  margin-right: 0.7%;
+  margin-top: 0.3%;
 }
 
 /* Change the color of links on hover */

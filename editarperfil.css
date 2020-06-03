@@ -112,6 +112,11 @@
     width: 100px;
   }
 
+  #btn_voltar{
+    color: rgb(208, 82, 82);
+    width: 100px;
+  }
+
 
   input[type=button]:hover,input[type=submit]:hover {
     outline-width: 0;

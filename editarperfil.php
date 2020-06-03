@@ -31,6 +31,7 @@
     <input type="password" name="editar_password"  placeholder="Password">
     <input type="password" name="editar_password2"  placeholder="Repita a Password">
     <input type="submit" name="submit" id="btn_aceitar" value="Alterar"> 
+    <input type="button" name="voltar" id="btn_voltar" value="Voltar" onClick= "location.href='perfil.php'"> 
   </table>       
   </form>
 

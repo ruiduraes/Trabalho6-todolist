@@ -17,6 +17,7 @@ if ($result = $mysqli->query($query)) {
     while ($row = $result->fetch_assoc()) {
         $nome = $row['Nome'];
         $sobrenome = $row["Sobrenome"];
+        $id_user = $row['id'];
         //echo $Email;  
         //echo '<br>';
         //echo $row['id'];
@@ -65,6 +66,10 @@ while($row = $result->fetch_assoc()){
     <p> Bem vindo, <?=$nome?> <?=$sobrenome?></p>
   </div>
 
+  <form class="form" id="forma2" autocomplete="off" method="post" action="export.php">
+  <input type="submit" name="export" value="Exportar Tarefas" class="btn btn-success" />
+    </form>
+
   <form class="form" id="forma" autocomplete="off" method="post" action="tarefas.php"><!--Cria a forma-->       
     <h1>Lista To-Do</h1>
     <div id="myDIV" class="header">
@@ -82,6 +87,8 @@ while($row = $result->fetch_assoc()){
     ?>
     </ul  ><!--Onde as tarefas serão guardadas-->
   </form>
+
+
         
   <script src="inicio.js"></script>
 

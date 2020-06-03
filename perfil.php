@@ -21,6 +21,12 @@ if ($result = $mysqli->query($query)) {
         $email = $row['Email'];
         $cidade = $row['Cidade'];
         $telefone = $row['Telefone'];
+        if($telefone == ""){
+          $telefone = "Não inseriu";
+        }else{
+          $telefone = $row['Telefone'];
+        }
+      
         //echo $Email;
         //echo '<br>';
         //echo $row['id'];
@@ -61,11 +67,14 @@ if ($result = $mysqli->query($query)) {
   <table class = "tabela">
     <tr>
       <td>
-        <p>Nome: <?=$nome?> <?=$sobrenome?></p>
-        <p>Email: <?=$email?></p>
-        <p>Cidade: <?=$cidade?></p>
-        <p>Telefone: <?=$telefone?></p>
+        <p>Nome: <p1 id = variavel><?=$nome?> <?=$sobrenome?></p1></p>
+        <p>Email: <p1 id = variavel><?=$email?></p1></p>
+        <p>Cidade: <p1 id = variavel><?=$cidade?></p1></p>
+        <p>Telefone: <p1 id = variavel><?=$telefone?></p1></p>
       </td>
+      <td>
+        <img src="user.png"  id="boneco">
+    </td> 
     </tr>
   </table> 
   <button type="button" id="btn_editar" onClick= "location.href='editarperfil.php'">Editar</button>    

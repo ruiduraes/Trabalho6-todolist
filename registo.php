@@ -73,11 +73,17 @@ if (!empty($Pass)){
           if ($conn->query($sql)){
             $to = $Email;
             $subject = "To-Do";
-            $txt = "$Nome $Sobrenome obrigado por se ter registado, para confirmar a sua conta clique neste link: http://localhost/to-do/Trabalho6-todolist/verificado.php . $hash";
+            $txt = "  $Nome $Sobrenome obrigado por se ter registado, para confirmar a sua conta clique neste link: http://localhost/to-do/Trabalho6-todolist/verificado.php e adicione os campos abaixo.
+            
+            --------------------------------------
+            Email: $Email
+            Codigo: $hash 
+            --------------------------------------
+            ";
             $headers = "From: to-do@ismai.pt" . "\r\n" .
           "CC: to-do-team@ismai.pt";
             mail($to,$subject,$txt,$headers);
-            //header("Location: login.php");
+            header("Location: login.php");
           } else{
             echo "Error: ". $sql ."
             ". $conn->error;

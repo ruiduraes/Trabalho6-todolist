@@ -60,22 +60,24 @@ if (!empty($Pass)){
           // Cria conexao
           $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
 
+          $hash = (ROUND((RAND()* 10000),0));
+
           if (mysqli_connect_error()){
             die('Connect Error ('. mysqli_connect_errno() .') '
           . mysqli_connect_error());
           } else{
-            $sql = "INSERT INTO registo (Nome, Sobrenome, Cidade, Telefone, Email, Password)
-            values ('$Nome','$Sobrenome', '$Cidade', '$Telefone', '$Email', '$Pass')";
-
+            $sql = "INSERT INTO registo (Nome, Sobrenome, Cidade, Telefone, Email, Password, codigo)
+            values ('$Nome','$Sobrenome', '$Cidade', '$Telefone', '$Email', '$Pass', '$hash')";
+            
+            
           if ($conn->query($sql)){
             $to = $Email;
             $subject = "To-Do";
-            $txt = "$Nome $Sobrenome obrigado por se ter registado, para confirmar a sua conta clique neste link: http://localhost/to-do/Trabalho6-todolist/verificado.php .";
+            $txt = "$Nome $Sobrenome obrigado por se ter registado, para confirmar a sua conta clique neste link: http://localhost/to-do/Trabalho6-todolist/verificado.php . $hash";
             $headers = "From: to-do@ismai.pt" . "\r\n" .
           "CC: to-do-team@ismai.pt";
-
             mail($to,$subject,$txt,$headers);
-            header("Location: login.php");
+            //header("Location: login.php");
           } else{
             echo "Error: ". $sql ."
             ". $conn->error;

@@ -142,3 +142,7 @@
   input:focus {
     outline: 0;
   }
+
+    #txt_email{
+      margin-right: 5%;
+    }

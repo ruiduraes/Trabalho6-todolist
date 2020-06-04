@@ -30,6 +30,6 @@ Ricardo Nogueira<p>
 Rui Durães<p>
 Pedro Mendes<p>
 
-### Gestor de projeto:<p>
+### Gestor do projeto:<p>
 
 Alina Trifan<p>

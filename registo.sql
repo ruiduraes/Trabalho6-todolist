@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Jun-2020 às 12:18
+-- Tempo de geração: 04-Jun-2020 às 14:22
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.2.28
 
@@ -36,20 +36,44 @@ CREATE TABLE `registo` (
   `Telefone` int(9) DEFAULT NULL,
   `Email` varchar(255) NOT NULL,
   `PASSWORD` varchar(255) NOT NULL,
-  `verificado` tinyint(1) DEFAULT NULL
+  `verificado` tinyint(1) DEFAULT NULL,
+  `codigo` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `registo`
 --
 
-INSERT INTO `registo` (`id`, `Nome`, `Sobrenome`, `Cidade`, `Telefone`, `Email`, `PASSWORD`, `verificado`) VALUES
-(20, 'dsa', 'asd', '', 0, 'asdasd@dsfsdf.sdf', '123', 1),
-(21, 'asd', 'sad', '', 0, 'asd@gmail.com', '123', 1),
-(22, 'asd', 'asd', '', 0, 'dd@sdf.sdf', 'asd', NULL),
-(24, 'Ricardo', 'Nogueira', 'Ermesinde', 0, 'ricardito@gmail.com', '123', 1),
-(25, 'Jorge', 'Amaral', 'Ermesinde', 0, 'jorge@gmail.com', '123', 1),
-(26, 'Rui', 'Duraes', 'Maia', 0, 'rui@gmail.com', '123', 1);
+INSERT INTO `registo` (`id`, `Nome`, `Sobrenome`, `Cidade`, `Telefone`, `Email`, `PASSWORD`, `verificado`, `codigo`) VALUES
+(56, 'Ricardo', 'Nogueira', 'Ermesinde', 911111111, 'ricardo@gmail.com', '123', 1, '20567766210000'),
+(57, 'Rui', 'Duraes', 'Maia', 0, 'rui@gmail.com', '123', 1, '3531502760000'),
+(58, 'Pedro', 'Mendes', 'Maia', NULL, 'pedro@gmail.com', '123', 1, '1921509610000');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tarefa`
+--
+
+CREATE TABLE `tarefa` (
+  `id_tarefa` int(11) NOT NULL,
+  `descricao` varchar(255) NOT NULL,
+  `id_user` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `tarefa`
+--
+
+INSERT INTO `tarefa` (`id_tarefa`, `descricao`, `id_user`) VALUES
+(207, 'Azeite', 56),
+(209, 'Agua', 56),
+(210, 'Leite', 57),
+(211, 'Vinho', 57),
+(212, 'Ovos', 58),
+(215, 'Agua', 57),
+(216, 'Vinho', 58),
+(217, 'Sumo', 57);
 
 --
 -- Índices para tabelas despejadas
@@ -62,6 +86,12 @@ ALTER TABLE `registo`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `tarefa`
+--
+ALTER TABLE `tarefa`
+  ADD PRIMARY KEY (`id_tarefa`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -69,7 +99,13 @@ ALTER TABLE `registo`
 -- AUTO_INCREMENT de tabela `registo`
 --
 ALTER TABLE `registo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+
+--
+-- AUTO_INCREMENT de tabela `tarefa`
+--
+ALTER TABLE `tarefa`
+  MODIFY `id_tarefa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=228;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

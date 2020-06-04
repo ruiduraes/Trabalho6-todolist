@@ -76,8 +76,9 @@
     margin-top: 5%;
   }
 
-  #recuperacao{
+  #btn_recuperacao{
     text-decoration: none;
+    color: #bb86fc;
   }
   
   h5{

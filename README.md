@@ -29,3 +29,7 @@ Test Mail Server Tool: https://toolheap.com/test-mail-server-tool/users-manual.h
 Ricardo Nogueira<p>
 Rui Durães<p>
 Pedro Mendes<p>
+
+### Gestor de projeto:<p>
+
+Alina Trifan<p>

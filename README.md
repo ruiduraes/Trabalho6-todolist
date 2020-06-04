@@ -33,3 +33,6 @@ Pedro Mendes<p>
 ### Gestor do projeto:<p>
 
 Alina Trifan<p>
+  
+### Agradecimentos: <p>
+Agradecemos à professora Alina por nos ter ajudado nas dificuldades ao longo do trabalho. Queremos também agradecer ao Marco Pereira, à Irene Canelas e à Sara Rocha que independentemente de terem contríbuido muito ou pouco ajudaram-nos a resolver alguns problemas. Foi um trabalho bem sucedido e ficamos a perceber mais sobre todas as ferramentas que usamos. <p>

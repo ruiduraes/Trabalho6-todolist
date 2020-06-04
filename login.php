@@ -25,6 +25,8 @@
       <input type="button" id="btn_cancelar"  value="Voltar" onClick= "location.href='index.html'">
   </div>
 
+  <h3>Esqueceu-se da password?<a id="btn_recuperacao" href="recuperacao.php"> Recuperar</div>
+
   <script src="login.js" type="text/javascript"></script> 
 
   </form>

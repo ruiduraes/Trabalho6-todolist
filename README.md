@@ -3,7 +3,7 @@
 ### Software Necessário:
 
 Xampp: https://www.apachefriends.org/download.html<p>
-Test Mail Server Toolhttps://toolheap.com/test-mail-server-tool/users-manual.html<p>
+Test Mail Server Tool: https://toolheap.com/test-mail-server-tool/users-manual.html<p>
 
 ### Como correr este website:
 
